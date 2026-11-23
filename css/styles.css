@@ -120,42 +120,14 @@ button:focus-visible {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  font-weight: 800;
-  font-size: 1.1rem;
-  letter-spacing: 0.2px;
-}
-
-.brand-mark {
-  position: relative;
-  width: 26px;
-  height: 26px;
   flex: 0 0 auto;
 }
 
-/* Logo cách điệu theo tông cyan / magenta (thuần CSS, không phụ thuộc ảnh) */
-.brand-note {
-  position: relative;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background: var(--cyan);
-  box-shadow: 2px 2px 0 var(--magenta);
-}
-
-.brand-note::before {
-  content: "";
-  position: absolute;
-  inset: 8px;
-  border-radius: 50%;
-  background: var(--navy-950);
-}
-
-.brand-text {
-  background: linear-gradient(90deg, var(--cyan), #ffffff 55%, var(--magenta));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+/* Logo chính thức TikTok Shop (nền trong suốt, giữ nguyên tỉ lệ) */
+.brand-logo {
+  display: block;
+  height: 30px;
+  width: auto;
 }
 
 .nav-list {
@@ -237,15 +209,14 @@ button:focus-visible {
    ========================================================================== */
 .hero {
   position: relative;
-  min-height: calc(100vh - var(--header-height));
   display: flex;
   align-items: center;
   background-color: var(--navy-900);
   background-image: linear-gradient(
       180deg,
-      rgba(4, 11, 32, 0.35) 0%,
-      rgba(4, 11, 32, 0.25) 45%,
-      rgba(4, 11, 32, 0.85) 100%
+      rgba(4, 11, 32, 0.28) 0%,
+      rgba(4, 11, 32, 0.12) 42%,
+      rgba(6, 16, 39, 0.78) 100%
     ),
     url("../assets/bg-racing-desktop.png");
   background-size: cover;
@@ -259,19 +230,19 @@ button:focus-visible {
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(60% 45% at 50% 40%, rgba(31, 123, 255, 0.18), transparent 70%),
-    linear-gradient(90deg, rgba(254, 44, 85, 0.08), transparent 30%, transparent 70%, rgba(37, 244, 238, 0.1));
+    radial-gradient(55% 42% at 50% 38%, rgba(31, 123, 255, 0.14), transparent 70%),
+    linear-gradient(90deg, rgba(254, 44, 85, 0.06), transparent 30%, transparent 70%, rgba(37, 244, 238, 0.08));
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
   text-align: center;
-  padding: clamp(48px, 8vh, 96px) 0;
+  padding: clamp(40px, 6.5vh, 72px) 0 clamp(36px, 5.5vh, 64px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: clamp(20px, 3vh, 32px);
+  gap: clamp(14px, 2.2vh, 22px);
 }
 
 .hero-logo {
@@ -654,23 +625,26 @@ button:focus-visible {
     border-radius: 10px;
   }
 
-  /* Hero mobile: dùng ảnh nền dọc riêng, crop gọn phần trên */
+  .brand-logo {
+    height: 24px;
+  }
+
+  /* Hero mobile: dùng ảnh nền dọc riêng, giữ mascot chính và logo sự kiện */
   .hero {
-    min-height: auto;
     background-image: linear-gradient(
         180deg,
-        rgba(4, 11, 32, 0.25) 0%,
-        rgba(4, 11, 32, 0.35) 50%,
-        rgba(4, 11, 32, 0.92) 100%
+        rgba(4, 11, 32, 0.2) 0%,
+        rgba(4, 11, 32, 0.28) 48%,
+        rgba(6, 16, 39, 0.9) 100%
       ),
       url("../assets/bg-racing-mobile.png");
-    background-position: center top;
+    background-position: center 32%;
     background-size: cover;
   }
 
   .hero-content {
-    gap: 22px;
-    padding: 56px 0 64px;
+    gap: 16px;
+    padding: 40px 0 48px;
   }
 
   .hero-logo {
@@ -709,10 +683,6 @@ button:focus-visible {
 }
 
 @media (max-width: 380px) {
-  .brand-text {
-    font-size: 1rem;
-  }
-
   .btn {
     padding-inline: 22px;
   }

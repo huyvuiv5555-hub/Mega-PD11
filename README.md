@@ -16,6 +16,7 @@ mega-sale-luong-ve/
 │   └── main.js             # Menu mobile + đồng bộ link đăng ký
 ├── assets/
 │   ├── logo-mega-sale-luong-ve.png      # Logo chiến dịch
+│   ├── logo-tiktok-shop-white.png       # Logo chính thức TikTok Shop (navbar)
 │   ├── bg-racing-desktop.png            # Background đường đua (desktop)
 │   ├── bg-racing-mobile.png             # Background đường đua (mobile)
 │   ├── heading-dac-quyen-thuong.png     # Tiêu đề "Đặc quyền thưởng"
